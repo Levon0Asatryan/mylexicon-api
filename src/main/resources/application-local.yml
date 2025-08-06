@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: mylexicon-api
+
+#  # Use this if you connect to a database (optional for now)
+#  datasource:
+#    url: jdbc:postgresql://localhost:5432/mylexicon
+#    username: postgres
+#    password: your_password
+#    driver-class-name: org.postgresql.Driver
+
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    show-sql: true
+#    properties:
+#      hibernate:
+#        format_sql: true
+
+  docker:
+    compose:
+      enabled: false
+
+  main:
+    allow-bean-definition-overriding: true
+
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+      - org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration
+
+server:
+  port: 9090
+
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web: DEBUG
+    com.example.mylexicon: DEBUG
