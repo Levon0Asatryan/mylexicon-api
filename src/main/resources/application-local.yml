@@ -38,3 +38,7 @@ logging:
     root: INFO
     org.springframework.web: DEBUG
     com.example.mylexicon: DEBUG
+
+
+dictionary:
+  base-url: https://api.dictionaryapi.dev/api/v2/entries/en
